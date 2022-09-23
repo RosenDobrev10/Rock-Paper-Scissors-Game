@@ -16,3 +16,7 @@ The game continues until one of the players reach 3 wins.
 You can restart the game after it is finished by typing 'yes' or quit by typing 'no'.
 
 ![image](https://user-images.githubusercontent.com/104829819/191961241-fc269fe1-ac5b-4a3f-accb-1c89767bc947.png)
+
+https://replit.com/@RosenDobrev10/Rock-Paper-Scissors#index.js - You can play here.
+
+Enjoy the game ! :)

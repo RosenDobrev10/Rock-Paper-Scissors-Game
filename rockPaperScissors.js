@@ -1,7 +1,7 @@
 const colors = require("colors/safe");
 console.log("You can choose between: rock, paper or scissors.");
 
-function rockpaperScissors(playerTurn) {
+function rockPaperScissors(playerTurn) {
 
     const rock = "rock";
     const paper = "paper";
@@ -57,16 +57,15 @@ function rockpaperScissors(playerTurn) {
             losses++;
         }
         console.log(`The temporary result is ${wins} : ${losses}\n`);
-        rockpaperScissors(prompt("Enter your choice "));
     }
 
     console.log(`The final result is ${wins} : ${losses}`);
     wins > losses
-        ? console.log(colors.green(`Congratulations! You have WON the game. 👏`))
-        : console.log(colors.red(`I am sorry! You have LOST the game. 😥`));
+        ? console.log(colors.green(`Congratulations! You have WON the game. 👏\n`))
+        : console.log(colors.red(`I am sorry! You have LOST the game. 😥\n`));
 
     console.log(`If you want to play again, please enter 'yes', if you want to quit the game enter 'no'.`);
     let userChoice = prompt(`Do you want to play again?`);
-    userChoice === "yes" ? rockpaperScissors(prompt("Enter your choice ")) : null;
+    userChoice === "yes" ? rockPaperScissors(prompt("Enter your choice ")) : null;
 }
-rockpaperScissors(prompt("Enter your choice "));
+rockPaperScissors(prompt("Enter your choice "));

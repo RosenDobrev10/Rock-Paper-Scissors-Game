@@ -1,5 +1,9 @@
 @import url(https://use.fontawesome.com/releases/v6.2.0/css/all.css);
 
+body {
+  margin: 0;
+}
+
 .choiceBtn {
   line-height: 30px;
   width: 200px;
@@ -22,6 +26,7 @@
   padding: 10px;
   background-color: lightgrey;
   text-align: center;
+  height: 40vh;
 }
 
 #playerText {

@@ -6,8 +6,10 @@ const choiceBtns = document.querySelectorAll(".choiceBtn");
 
 let player;
 let computer;
-let wins = 0
-let losses = 0
+
+
+let wins = 0;
+let losses = 0;
 
 choiceBtns.forEach((button) => button.addEventListener("click", () => {
     player = button.textContent;
@@ -16,9 +18,9 @@ choiceBtns.forEach((button) => button.addEventListener("click", () => {
     computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = checkWinner();
     if (resultText.textContent === "You Win!") {
-        wins++
+        wins++;
     } else if (resultText.textContent === "You Lose!") {
-        losses++
+        losses++;
     }
     finalText.textContent = finalWinner();
 })
@@ -50,8 +52,12 @@ function checkWinner() {
 
 function finalWinner() {
     if (wins === 3) {
-        return `Final result is ${wins} - ${losses}. YOU HAVE WON THE GAME !!!`
+        choiceBtns.forEach(button => button.disabled = true)
+        return `Final result is ${wins} - ${losses}. YOU HAVE WON THE GAME !!!`;
     } else if (losses === 3) {
-        return `Final result is ${wins} - ${losses}. YOU HAVE LOST THE GAME !!!`
+        choiceBtns.forEach(button => button.disabled = true)
+        return `Final result is ${wins} - ${losses}. YOU HAVE LOST THE GAME !!!`;
+    } else {
+        return `Temporary result is ${wins} - ${losses}.`;
     }
 }
